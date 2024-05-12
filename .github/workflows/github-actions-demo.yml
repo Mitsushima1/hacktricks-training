@@ -26,4 +26,4 @@ jobs:
           role-session-name: OIDCSession
  
       - run: aws sts get-caller-identity
-        shell: bash
+        shell: powershell
