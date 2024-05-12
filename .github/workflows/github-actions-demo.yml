@@ -21,8 +21,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-region: eu-west-1
-          role-to-assume: ${{ secrets.READ_ROLE }}
+          aws-region: us-west-1
+          role-to-assume: arn:aws:iam::862011636402:oidc-provider/token.actions.githubusercontent.com
           role-session-name: OIDCSession
  
       - run: aws sts get-caller-identity
